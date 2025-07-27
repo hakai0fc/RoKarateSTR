@@ -1,0 +1,26 @@
+--ANTI AFK
+pcall(function()
+    local VirtualUser = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)
+end)
+--GLOBALS
+local LP = game.Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+--BY HAKAI_OFC FORÇA
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local BridgeNet = require(Modules:WaitForChild("BridgeNet2"))
+local remote = BridgeNet.ReferenceBridge("imadumbexploiter9d7f88729c2c6ceff3bb1ce223049848")
+local remote = BridgeNet.ReferenceBridge("imadumbexploiter9d7f88729c2c6ceff3bb1ce223049848")
+local ENVIO_POR_FRAME = 3500
+local INTERVALO = 0.000001
+while task.wait(INTERVALO) do
+    for i = 1, ENVIO_POR_FRAME do
+        remote:Fire()
+        remote:Fire()
+    end
+end
